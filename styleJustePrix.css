@@ -60,3 +60,26 @@ html, body {
     color: #dc3545;
     margin-top: 5px;
 }
+
+#instructions {
+    color: white;
+    font-weight: 100;
+    width: 80%;
+}
+
+.instruction {
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.plus {
+    background-color: #f67280;
+}
+
+.moins {
+    background-color: #ffa372;
+}
+
+.fini {
+    background-color : #0c9463;
+}
