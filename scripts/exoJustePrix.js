@@ -2,9 +2,11 @@ let input = document.getElementById('prix');
 let error = document.querySelector('small');
 let form = document.getElementById('formulaire');
 
+document.getele
+
 error.style.display = 'none';
 
-let randomNumber = Math.floor(Math.random() * 101);
+let randomNumber = Math.floor(Math.random() * 11);
 let coup = 0;
 let nombreChoisi;
 
