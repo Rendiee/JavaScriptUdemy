@@ -97,17 +97,19 @@ function createCard(nbPerso, name, classe, sante, degat){
     let d = document.createElement('div');
     d.textContent = 'Attaque basique : ' + degat + ' dégats';
     let co = document.createElement('div');
-    co.textContent = 'Coup spécial : ' + (degat * 5) + 'dégats';
+    co.textContent = 'Coup spécial : ' + (degat * 5) + ' dégats';
 
     t.className = 'title-card';
     card.className = 'card';
+    card.setAttribute('id', name);
 
     card.append(t,n,cl,s,d,co);
 
-    console.log('Dégat : '+degat);
-
     return card;  
 }
+
+var m;
+var g;
 
 creer.addEventListener('click', () => {
 
@@ -118,13 +120,13 @@ creer.addEventListener('click', () => {
             if(classe.value == 'Magicien'){
                 nbPerso++;
 
-                var m = new Magicien(pseudo.value, classe.value, sante.value, degat.value);
+                m = new Magicien(pseudo.value, classe.value, sante.value, degat.value);
                 listPerso.append(createCard(nbPerso, m.pseudo, m.classe, m.sante, m.attaque));
         
             }else if(classe.value == 'Guerrier'){
                 nbPerso++;
 
-                var g = new Guerrier(pseudo.value, classe.value, sante.value, degat.value);
+                g = new Guerrier(pseudo.value, classe.value, sante.value, degat.value);
                 listPerso.append(createCard(nbPerso, g.pseudo, g.classe, g.sante, g.attaque));
 
             }else{
