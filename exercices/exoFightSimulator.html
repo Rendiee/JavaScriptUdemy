@@ -18,8 +18,11 @@
             <div class="card">
                 <p class="title-card">Créer un personnage</p>
                 <input class="form-card" id="pseudo" type="text" placeholder="Pseudo .."/>
-                <input class="form-card" id="classe" type="text" placeholder="Classe .."/>
-                <small class="text-error" id="error-classe">Erreur : classe incorrecte ! 'Magicien' ou 'Guerrier'</small>
+                <select class="form-card" id="list-class">
+                    <option value="base" selected disabled>- Choisi une classe -</option>
+                    <option value="Magicien">1 - Magicien</option>
+                    <option value="Guerrier">2 - Guerrier</option>
+                </select>
                 <input class="form-card" id="sante" type="number" placeholder="Santé .."/>
                 <input class="form-card" id="degat" type="number" placeholder="Dégat .."/>
                 <button class="form-button" id="creer-personnage">Créer</button>
@@ -27,9 +30,11 @@
             </div>
             <div id="list-perso" class="sous-container">
             </div>
+            <div id="list-info" class="sous-container flex-direction-column">
+                <button id="attack" class="form-button-attack">Lancer l'attaque !</button>
+            </div>
         </div>
     </div>
-
 </body>
 <script src="../scripts/exoFightSimulator.js"></script>
 </html>

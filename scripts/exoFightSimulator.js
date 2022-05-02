@@ -20,9 +20,10 @@ class Personnage {
         }
     }
 
-    get informations() {
-        return this.pseudo + ' ' + this.classe + ' a ' + this.sante + ' points de vie et est au niveau ' + this.niveau;
+    informations() {
+        return 'Le ' + this.classe + ' ' + this.pseudo + ' a ' + this.sante + ' points de vie et est au niveau ' + this.niveau;
     }
+
 }
 
 class Magicien extends Personnage {
@@ -32,16 +33,16 @@ class Magicien extends Personnage {
 
     attaquer(Personnage) {
         Personnage.sante -= this.attaque;
-        console.log(this.pseudo + ' attaque ' + Personnage.pseudo + ' en lançant un sort (' + this.attaque + ' dégats)');
         this.evoluer();
         Personnage.verifierSante();
+        return this.pseudo + ' attaque ' + Personnage.pseudo + ' en lançant un sort (' + this.attaque + ' dégats)';
     }
 
     coupSpecial(Personnage) {
         Personnage.sante = Personnage.sante - (this.attaque * 5);
-        console.log(this.pseudo + ' attaque avec son coup spécial puissance des arcanes ' + Personnage.pseudo + ' (' + (this.attaque * 5) + ' dégats)');
         this.evoluer();
         Personnage.verifierSante();
+        return this.pseudo + ' attaque avec son coup spécial puissance des arcanes ' + Personnage.pseudo + ' (' + (this.attaque * 5) + ' dégats)';
     }
 }
 
@@ -52,16 +53,16 @@ class Guerrier extends Personnage {
 
     attaquer(Personnage) {
         Personnage.sante -= this.attaque;
-        console.log(this.pseudo + ' attaque ' + Personnage.pseudo + ' avec son épée (' + this.attaque + ' dégats)');
         this.evoluer();
         Personnage.verifierSante();
+        return this.pseudo + ' attaque ' + Personnage.pseudo + ' avec son épée (' + this.attaque + ' dégats)';
     }
 
     coupSpecial(Personnage) {
         Personnage.sante = Personnage.sante - (this.attaque * 5);
-        console.log(this.pseudo + ' attaque avec son coup spécial haches de guerre ' + Personnage.pseudo + ' (' + (this.attaque * 5) + ' dégats)');
         this.evoluer();
         Personnage.verifierSante();
+        return this.pseudo + ' attaque avec son coup spécial haches de guerre ' + Personnage.pseudo + ' (' + (this.attaque * 5) + ' dégats)';
     }
 }
 
@@ -73,15 +74,27 @@ let errorChamp = document.getElementById('error-champ');
 let errorNbPerso = document.getElementById('error-nb-perso');
 
 let pseudo = document.getElementById('pseudo');
-let classe = document.getElementById('classe');
+let classe = document.getElementById('list-class');
 let sante = document.getElementById('sante');
 let degat = document.getElementById('degat');
 
-errorClasse.style.display = 'none';
+let btnAttack = document.getElementById('attack');
+
+let listInfo = document.getElementById('list-info');
+
+btnAttack.style.display = 'none';
 errorChamp.style.display = 'none';
 errorNbPerso.style.display = 'none';
 
 let nbPerso = 0;
+let perso = [];
+
+function createTextInfo(text, classname){
+    let p = document.createElement('p');
+    p.textContent = text;
+    p.className = classname;
+    return p;
+}
 
 function createCard(nbPerso, name, classe, sante, degat){
     let card = document.createElement('div');
@@ -108,9 +121,6 @@ function createCard(nbPerso, name, classe, sante, degat){
     return card;  
 }
 
-var m;
-var g;
-
 creer.addEventListener('click', () => {
 
     if(nbPerso != 2) {
@@ -120,18 +130,29 @@ creer.addEventListener('click', () => {
             if(classe.value == 'Magicien'){
                 nbPerso++;
 
-                m = new Magicien(pseudo.value, classe.value, sante.value, degat.value);
+                var m = new Magicien(pseudo.value, classe.value, sante.value, degat.value);
                 listPerso.append(createCard(nbPerso, m.pseudo, m.classe, m.sante, m.attaque));
+
+                perso.push(m);
+
+                if(nbPerso == 2){
+                   btnAttack.style.display = 'inline';
+                }
         
             }else if(classe.value == 'Guerrier'){
                 nbPerso++;
 
-                g = new Guerrier(pseudo.value, classe.value, sante.value, degat.value);
+                var g = new Guerrier(pseudo.value, classe.value, sante.value, degat.value);
                 listPerso.append(createCard(nbPerso, g.pseudo, g.classe, g.sante, g.attaque));
 
-            }else{
-                errorClasse.style.display = 'inline';
+                perso.push(g);
+
+                if(nbPerso == 2){
+                    btnAttack.style.display = 'inline';
+                 }
+
             }
+
         }else{
             errorChamp.style.display = 'inline';
         }
@@ -139,3 +160,17 @@ creer.addEventListener('click', () => {
         errorNbPerso.style.display = 'inline';
     }
 });
+
+
+let attack = document.getElementById('attack');
+attack.addEventListener('click', () => {
+    listInfo.append(createTextInfo(perso[0].informations(), 'background-text text-info'));
+    listInfo.append(createTextInfo(perso[1].informations(), 'background-text text-info'));
+    listInfo.append(createTextInfo(perso[0].attaquer(perso[1]), 'background-text text-attack'));
+    listInfo.append(createTextInfo(perso[1].informations(), 'background-text text-info'));
+    listInfo.append(createTextInfo(perso[1].attaquer(perso[0]), 'background-text text-attack'));
+    listInfo.append(createTextInfo(perso[0].informations(), 'background-text text-info'));
+
+});
+
+

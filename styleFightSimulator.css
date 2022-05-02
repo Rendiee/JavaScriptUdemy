@@ -25,6 +25,10 @@ html, body {
     align-items: center;
 }
 
+.flex-direction-column {
+    flex-direction: column;
+}
+
 .title {
     color: azure;
     font-size: 4em;
@@ -68,6 +72,44 @@ html, body {
     font-size: 1em;
 }
 
+.form-button-attack {
+    margin-top: 15px;
+    background-color: rgb(77, 123, 250);
+    color: white;
+    padding: 5px;
+    font-size: 1em;
+}
+
 .text-error {
     color: rgb(255, 0, 0);
+}
+
+.background-text {
+    color: white;
+    font-size: 1.25em;
+    background-color: rgb(221, 0, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid black;
+}
+
+
+.text-attack {
+    background-color: rgb(221, 0, 0);
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.text-die {
+    background-color: rgb(41, 41, 41);
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.text-info {
+    background-color: rgb(36, 182, 0);
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
