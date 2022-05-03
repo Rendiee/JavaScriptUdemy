@@ -10,13 +10,13 @@ class Personnage {
 
     evoluer() {
         this.niveau++;
-        console.log(this.pseudo + ' passe au niveau ' + this.niveau + ' !');
+        return this.pseudo + ' passe au niveau ' + this.niveau + ' !';
     }
 
     verifierSante() {
         if(this.sante <= 0){
             this.sante = 0;
-            console.log(this.pseudo + ' a perdu !');
+            return this.pseudo + ' a perdu !';
         }
     }
 
