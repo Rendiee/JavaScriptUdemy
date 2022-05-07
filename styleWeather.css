@@ -1,8 +1,45 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+html, body {
     background-image: url('./assets/rain\ -\ Copie.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 1920px;
-    filter: brightness(80%);
+    height: 100%;
+    font-family: 'Roboto Flex';
+}
+
+.font-size-125em {
+    font-size: 1.25em;
+}
+
+.search-col {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.form-search {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.color-grey {
+    color: rgb(185, 185, 185);
+}
+
+.list-history {
+    padding-left: 0;
+    list-style-type: none;
+    line-height: 60px;
+}
+
+.hr-class {
+    color: white;
+}
+
+::placeholder {
+    color: white;
 }
