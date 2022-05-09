@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 
 html, body {
-    background-image: url('./assets/rain\ -\ Copie.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 1920px;
     height: 100%;
+}
+
+body {
+    background-image: url('./assets/weather-wallpaper/rain.jpg');
 }
 
 .font-size-125em {
@@ -40,9 +43,13 @@ html, body {
 }
 
 .city-info {
-    padding-top: 69vh;
-    padding-left: 17vh;
+    margin-top: 69vh;
+    margin-left: 17vh;
+    margin-right: 28vh;
     color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    backdrop-filter: blur(15px);
 }
 
 .temp {
@@ -58,6 +65,14 @@ html, body {
 .icon {
     height: auto;
     width: 70px;
+}
+
+.rain-color {
+    background-color: #9ab1ad;
+}
+
+.sun-color {
+    background-color: rgb(241, 134, 62);
 }
 
 .button-search {

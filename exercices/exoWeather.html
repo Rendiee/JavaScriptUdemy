@@ -13,17 +13,17 @@
         <div class="container-fluid h-100">
             <div class="row bg-transparent h-100">
                 <div class="col-md-7">
-                    <div class="d-flex city-info">
+                    <div class="d-flex justify-content-center city-info">
                         <div class="d-flex justify-content-center">
-                            <div class="temp">10.83°C</div>
+                            <div id="temp-text" class="temp"></div>
                         </div>
                         <div class="d-flex flex-column justify-content-center ps-4">
-                            <div class="city">Orléans</div>
-                            <div>01:14 - Samedi 06 Octobre '22</div>
+                            <div id="city-text" class="city"></div>
+                            <div id="time-text"></div>
                         </div>
                         <div class="d-flex flex-column justify-content-center ps-4">
-                            <div><img class="icon pb-1" src="../assets/rain-icon.png" alt="rain" ></div>
-                            <div>Pluvieux</div>
+                            <div><img id="img-icon" class="icon pb-1" src="" ></div>
+                            <div id="desc-text"></div>
                         </div>
                     </div>
                 </div>
@@ -31,36 +31,35 @@
                     <div class="pt-3">
                         <div class="d-flex justify-content-between">
                             <div class="w-100">
-                                <input class="form-search" type="text" placeholder="Rechercher une ville" />
+                                <input id="input-city" class="form-search" type="text" placeholder="Rechercher une ville" />
                                 <hr class="w-75 hr-class">
                             </div>
-                            <input class="button-search" value="" type="submit"/>
+                            <input id="search-city" class="button-search" value="" type="submit"/>
                         </div>
                     </div>
-                    <ul class="list-history color-grey">
+                    <small id="error-empty" class="text-danger fw-bold">Champ vide détecté !</small>
+                    <h4 class="pt-3 text-white mb-3">Historique de recherche</h4>
+                    <ul id="city-history" class="list-history color-grey">
                         <li>Paris</li>
-                        <li>Madrid</li>
-                        <li>Fontainebleau</li>
-                        <li>Orléans</li>
                     </ul>
                     <hr class="hr-class mt-4">
                     <h4 class="pt-3 text-white mb-5">Prévision météorologique</h4>
                     <div class="color-grey d-flex flex-column justify-content-around">
                         <div class="d-flex justify-content-between mb-4">
-                            <div>Nuageux</div>
-                            <div class="text-white">51%</div>
+                            <div>Couverture nuageuse</div>
+                            <div id="cloud-text" class="text-white"></div>
                         </div>
                         <div class="d-flex justify-content-between mb-4">
                             <div>Humidité</div>
-                            <div class="text-white">80%</div>
+                            <div id="humidity-text" class="text-white"></div>
                         </div>
                         <div class="d-flex justify-content-between mb-4">
                             <div>Vent</div>
-                            <div class="text-white">5 Km/h</div>
+                            <div id="wind-text" class="text-white"></div>
                         </div>
                         <div class="d-flex justify-content-between mb-4">
                             <div>Coordonnée</div>
-                            <div class="text-white">48.4088, 7.6758</div>
+                            <div id="coord-text" class="text-white"></div>
                         </div>
                     </div>
                     <hr class="hr-class mt-4">
