@@ -7,7 +7,6 @@ html, body {
     background-attachment: fixed;
     background-size: 1920px;
     height: 100%;
-    font-family: 'Roboto Flex';
 }
 
 .font-size-125em {
@@ -16,7 +15,7 @@ html, body {
 
 .search-col {
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
 }
 
 .form-search {
@@ -38,6 +37,40 @@ html, body {
 
 .hr-class {
     color: white;
+}
+
+.city-info {
+    padding-top: 69vh;
+    padding-left: 17vh;
+    color: white;
+}
+
+.temp {
+    font-size: 100px;
+    font-weight: bold;
+}
+
+.city {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.icon {
+    height: auto;
+    width: 70px;
+}
+
+.button-search {
+    background-color: #9ab1ad;
+    border: none;
+    border-radius: 3px;
+    width: 90px;
+    color: white;
+    font-weight: bold;
+    background-image: url('./assets/loupe.png');
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 ::placeholder {
