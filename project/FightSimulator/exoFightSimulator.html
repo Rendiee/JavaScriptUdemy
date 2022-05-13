@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styleFightSimulator.css" rel="stylesheet">
+    <title>Fight Simulator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="sous-container align-item-center flex-column">
+            <p class="title">The Fight Simulator</p>
+            <p class="text-error" id="error-nb-perso">Nombre maximal de personnage atteint !</p>
+            <div class="card">
+                <p class="title-card">Créer un personnage</p>
+                <input class="form-card" id="pseudo" type="text" placeholder="Pseudo .."/>
+                <select class="form-card" id="list-class">
+                    <option value="base" selected disabled>- Choisi une classe -</option>
+                    <option value="Magicien">1 - Magicien</option>
+                    <option value="Guerrier">2 - Guerrier</option>
+                </select>
+                <input class="form-card" id="sante" type="number" placeholder="Santé .."/>
+                <input class="form-card" id="degat" type="number" placeholder="Dégat .."/>
+                <button class="form-button" id="creer-personnage">Créer</button>
+                <small class="text-error" id="error-champ">Erreur : champ vide détecté !</small>
+            </div>
+            <div id="list-perso" class="sous-container">
+            </div>
+            <div id="list-info" class="sous-container flex-direction-column">
+                <button id="attack" class="form-button-attack">Lancer l'attaque !</button>
+            </div>
+        </div>
+        <p><a href="../../index.html">Page principale</a></p>
+    </div>
+</body>
+<script src="./exoFightSimulator.js"></script>
+</html>

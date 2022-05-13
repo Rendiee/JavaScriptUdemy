@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+html, body {
+    font-family: 'Koulen';
+}
+
+.calc-position {
+    margin-top: 1%;
+    width: 25%;
+    border-radius: 5px;
+}
+
+.color-key {
+    color: rgb(108, 142, 195);
+}
+
+.bg-new {
+    background-color: rgb(108, 142, 195);
+}
+
+.form-calc-up {
+    background-color: rgb(49, 53, 62);
+    padding: 120px 40px 20px 40px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-calc-down {
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.calcul-history {
+    font-size: 40px;
+    color: rgb(108, 113, 126);
+}
+
+.calcul-actual {
+    font-size: 70px;
+    color: rgb(238, 238, 238);
+    
+}
+
+td {
+    box-shadow: 0px 0 .5rem 0px rgba(0,0,0,.15) !important;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
