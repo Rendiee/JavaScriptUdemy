@@ -10,41 +10,40 @@
 </head>
     <body>
         <div class="calc-position mx-auto shadow">
-            <div class="form-calc-up text-white text-end">
-                <div class="calcul-history">10 x 10</div>
-                <div class="calcul-actual">100</div>
+            <div class="form-calc-up text-white text-end h-50">
+                <div data-old class="calcul-history">10</div>
+                <div data-current class="calcul-actual">100</div>
             </div>
             <div class="form-calc-down p-3">
                 <table class="table text-center table-borderless">
                     <tbody>
                       <tr>
-                        <td class="text-secondary">C</td>
-                        <td class="text-secondary">⬅</td>
-                        <td class="text-secondary">%</td>
-                        <td class="color-key    ">÷</td>
+                        <td data-reset colspan="2" class="text-secondary">CE</td>
+                        <td data-remove-number class="text-secondary"><</td>
+                        <td data-operator class="color-key">÷</td>
                       </tr>
                       <tr class="color-key">
-                        <td>7</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td>x</td>
+                        <td data-number>7</td>
+                        <td data-number>8</td>
+                        <td data-number>9</td>
+                        <td data-operator>x</td>
                       </tr>
                       <tr class="color-key">
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>-</td>   
+                        <td data-number>4</td>
+                        <td data-number>5</td>
+                        <td data-number>6</td>
+                        <td data-operator>-</td>   
                       </tr>
                       <tr class="color-key">
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>+</td>   
+                        <td data-number>1</td>
+                        <td data-number>2</td>
+                        <td data-number>3</td>
+                        <td data-operator>+</td>   
                       </tr>
                       <tr class="color-key">
-                        <td colspan="2">0</td>
-                        <td>.</td>
-                        <td class="text-white" style="background-color: rgb(108, 142, 195);">=</td>
+                        <td data-number colspan="2">0</td>
+                        <td data-number>.</td>
+                        <td data-equals>=</td>
                       </tr>
                     </tbody>
                   </table>
