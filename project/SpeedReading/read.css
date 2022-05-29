@@ -1,0 +1,12 @@
+.color-read {
+    color: rgb(95, 95, 95);
+    font-weight: bold;
+}
+
+.rest-word {
+    color: rgb(87, 87, 87);
+}
+
+.text-read {
+    line-height: 1.75em;
+}
