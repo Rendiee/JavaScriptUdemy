@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    font-family: Poppins;
+    padding: 0 8em;
+    margin: 0;
+    background-color: #fdfdfd;
+}
+
+nav {
+    padding-top: 1rem;
+}
+
+.container {
+    display: flex;
+}
+
+.left {
+    padding: 0 1rem 0 2rem;
+    min-width: 15%;
+}
+
+.right {
+    width: 100%;
+}
+
+.nav-link {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-inline-start: 0;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+    min-width: 15%;
+    padding-left: 2rem;
+}
+
+.logo {
+    height: auto;
+    max-width: 30px;
+}
+.title {
+    padding-left: 0.5rem;
+}
+
+.fork-link {
+    padding-left: 2rem;
+    color: blue;
+}
+
+.fork-link:visited {
+    color: blue;
+}
+
+.search-bar {
+    border: 1px solid #ced4da;
+    width: 100%;
+    border-radius: 20px;
+    padding: 6px 0px 6px 25px;
+    font-size: 1.8vh;
+}
+
+.line {
+    height: 1px;
+    border: 0;
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    margin: 1rem 0;
+}
+
+.tab-choice {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 5px 0 5px 10px;
+    color: rgb(138, 138, 138);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tab-choice[selected=on] {
+    color: black;
+    background-color: rgb(245, 245, 245);
+    border-radius: 7px;
+}
+
+.tab-choice:hover {
+    color: black;
+    background-color: rgb(250, 250, 250);
+    border-radius: 7px;
+}
+
+.icon-tab {
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    padding: 8px 0 8px 10px;
+}
+
+.tag:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 7px;
+}
+
+.feed {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 15px;
+}
+
+.item {
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.color-show {
+    height: 15vh;
+    width: 100%;
+}
+
+.color-hex {
+    text-transform: uppercase;
+}
+
+.title-color {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.3vh;
+    padding-bottom: 3vh;
+    padding-top: 2vh;
+}
+
+.color {
+    display: flex;
+}
+
+.fav-button {
+    background-color: transparent;
+    padding: 1vh;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 1px;
+    box-shadow: 0px 0px 3px 0.2px rgb(150, 150, 150);
+    margin: 1vh 0;
+}

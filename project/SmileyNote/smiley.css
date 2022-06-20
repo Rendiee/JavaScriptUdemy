@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body {
+    background-color: #00232A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    font-family: 'Roboto';
+    overflow: hidden;
+}
+
+.noodle {
+    position: absolute;
+    z-index: -1;
+    bottom: -30vh;
+    right: -10vh;
+    transform: rotate(-5deg);
+}
+
+.point {
+    position: absolute;
+    z-index: -1;
+    top: 4vh;
+    left: -6vh;
+}
+
+.point:nth-child(15) {
+    color: red;
+}
+
+.container {
+    background-color: #00232A;
+    border: 3px solid white;
+    width: 32vw;
+    padding: 4vh 0 25vh 0;
+    box-shadow: -15px 15px 0px -1px #00232A, -15px 15px 0px 2px #ffffff;
+}
+
+.close-container {
+    display: flex;
+    color: white;
+    font-weight: 300;
+    margin-left: 4vh;
+    width: 10vh;
+}
+
+.close-container:hover {
+    background-color: #004553;
+    border-radius: 5px;
+}
+
+.close-button {
+    border: none;
+    color: white;
+    background: none;
+    font-size: 2vh;
+    padding-right: 1.5vh;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    gap: 16px;
+    padding: 0;
+}
+
+li {
+    height: 86px;
+    width: 86px;
+    border-radius: 50%;
+    list-style: none;
+}
+
+.title {
+    color: white;
+    font-size: 5.5vh;
+    padding: 0 7vh 0 7vh;
+}
+
+.info {
+    color: white;
+    padding: 0 7vh 0 7vh;
+    font-size: 2.7vh;
+    font-weight: 300;
+}
+
+.face {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transform: translateX(22px);
+    width: 58px;
+    transition: 400ms;
+}
+
+li:hover .face {
+    transform: translateX(15px);
+}
+
+li:nth-child(1) {
+    background: radial-gradient(93.75% 96.51% at 6.25% 97.32%, #FF462E 0%, #FF7C50 100%);
+}
+
+li:nth-child(2) {
+    background: radial-gradient(93.75% 96.51% at 6.25% 97.32%, #FE6430 0%, #FFAA51 100%);
+}
+
+li:nth-child(3) {
+    background: radial-gradient(93.75% 96.51% at 6.25% 97.32%, #FFAD45 0%, #FFD27E 100%);
+}
+
+li:nth-child(4) {
+    background: radial-gradient(93.75% 96.51% at 6.25% 97.32%, #FFC82F 0%, #FFE253 100%);
+}
+
+li:nth-child(5) {
+    background: radial-gradient(93.75% 96.51% at 6.25% 97.32%, #FFE83A 0%, #FFF468 100%);
+}
+
+li:nth-child(1) .face {
+    top: 45px;
+}
+
+li:nth-child(2) .face {
+    top: 45px;
+}
+
+li:nth-child(3) .face {
+    top: 40px;
+}
+
+li:nth-child(4) .face {
+    top: 30px;
+}
+
+li:nth-child(5) .face {
+    top: 20px;
+}
+
+.eyebrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eyebrow span {
+    position: relative;
+    background-color: #00232A;
+    height: 7px;
+    width: 20px;
+    top: -3px;
+}
+
+.eyebrow span:nth-child(1) {
+    transform: rotate(15deg);
+}
+
+.eyebrow span:nth-child(2) {
+    transform: rotate(-15deg);
+}
+
+.eye {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eye span {
+    background-color: #00232A;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    animation: animEyes linear infinite 4s;
+}
+
+li:nth-child(-n + 2) .mouse {
+    position: relative;
+    top: -5px;
+    align-self: center;
+    height: 6px;
+    width: 10px;
+    border: 7px solid #00232A;
+    border-bottom: none;
+    border-top-left-radius: 120px;
+    border-top-right-radius: 120px;
+}
+
+li:nth-child(3) .mouse {
+    background-color: #00232A;
+    height: 7px;
+    width: 20px;
+    align-self: center;
+}
+
+li:nth-child(4) .mouse {
+    align-self: center;
+    height: 6px;
+    width: 10px;
+    border: 7px solid #00232A;
+    border-top: none;
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+li:nth-child(5) .mouse {
+    background-color: #00232A;
+    align-self: center;
+    height: 11px;
+    width: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+@keyframes animEyes {
+    0% {
+        transform: scaleY(1);
+    }
+
+    2% {
+        transform: scaleY(0.5);
+    }
+
+    4% {
+        transform: scaleY(0);
+    }
+
+    6% {
+        transform: scaleY(0.5);
+    }
+
+    8% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
